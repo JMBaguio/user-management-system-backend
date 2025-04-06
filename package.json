@@ -1,0 +1,24 @@
+{
+  "name": "user-management-system-backend",
+  "version": "1.0.0",
+  "description": "Group Project Activity: Full-Stack Application Development-BACKEND",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JMBaguio/user-management-system-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JMBaguio/user-management-system-backend/issues"
+  },
+  "homepage": "https://github.com/JMBaguio/user-management-system-backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
