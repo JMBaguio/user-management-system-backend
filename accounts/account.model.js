@@ -1,4 +1,4 @@
-const DataTypes = require('sequelize');
+const { DataTypes } = require('sequelize');
 
 module.exports = model;
 
@@ -33,7 +33,7 @@ function model(sequelize) {
         },
         scopes: {
             // include hash with this scope
-            withHash: { attributes: {}, }
+            withHash: { attributes: {}}
         }
     };
 

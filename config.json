@@ -3,17 +3,17 @@
       "host": "localhost",
       "port": 3306,
       "user": "root",
-      "password": "James123#",
+      "password": "#Baguio22643068",
       "database": "node-mysql-signup-verification-api"
     },
-    "secret": "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",
-    "emailFrom": "info@node-mysql-signup-verification-api.com",
+    "secret": "a057f7c4-2e7b-46f9-a9bf-9baa960115ba",
+    "emailFrom": "joannabaguio@mail.com",
     "smtpOptions": {
       "host": "smtp.ethereal.email",
       "port": 587,
       "auth": {
-        "user": "werner.schowalter@ethereal.email",
-        "pass": "aptEeUffGcd3jZ9ARM"
+        "user": "lois.reinger@ethereal.email",
+        "pass": "7SG6rRMNMUtx6f7VDw"
       }
     }
   }

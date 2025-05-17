@@ -1,1 +1,140 @@
-http://localhost:4000/api-docs/#/
+openapi: 3.0.0
+info:
+  title: User Management System API
+  description: API for Email Sign Up with Verification, Authentication & Forgot Password
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+    description: Development server
+paths:
+  /accounts/register:
+    post:
+      summary: Register a new user account
+      tags: [Accounts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+                confirmPassword:
+                  type: string
+                  format: password
+              required:
+                - email
+                - password
+                - confirmPassword
+      responses:
+        '200':
+          description: Registration successful
+        '400':
+          description: Validation error
+  /accounts/authenticate:
+    post:
+      summary: Authenticate user
+      tags: [Accounts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+              required:
+                - email
+                - password
+      responses:
+        '200':
+          description: Authentication successful
+        '400':
+          description: Invalid credentials
+  /accounts/verify-email:
+    post:
+      summary: Verify email address
+      tags: [Accounts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+              required:
+                - token
+      responses:
+        '200':
+          description: Email verification successful
+        '400':
+          description: Invalid token
+  /accounts/forgot-password:
+    post:
+      summary: Request password reset
+      tags: [Accounts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+              required:
+                - email
+      responses:
+        '200':
+          description: Password reset email sent
+        '400':
+          description: Email not found
+  /accounts/reset-password:
+    post:
+      summary: Reset password
+      tags: [Accounts]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                password:
+                  type: string
+                  format: password
+                confirmPassword:
+                  type: string
+                  format: password
+              required:
+                - token
+                - password
+                - confirmPassword
+      responses:
+        '200':
+          description: Password reset successful
+        '400':
+          description: Invalid token or validation error
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
