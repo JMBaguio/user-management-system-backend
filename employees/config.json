@@ -1,9 +1,9 @@
 {
     "database": {
-      "host": "localhost",
+      "host": "153.92.15.31",
       "port": 3306,
-      "user": "root",
-      "password": "#Baguio22643068",
+      "user": "u875409848_baguio",
+      "password": "9T2Z5$3UKkgSYzE",
       "database": "fullstack_db"
     },
     "secret": "a057f7c4-2e7b-46f9-a9bf-9baa960115ba",
